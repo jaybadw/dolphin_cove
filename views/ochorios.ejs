@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ochi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="#"class="hometext"><img src="logo.png" style="height:3vw; overflow: hidden;"> </a>
+        <nav>
+            <ul class="nav_links" >
+              <li><a >
+                <div class="dropdown">
+                <button class="dropbtn">Parks
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="/ochorios">Dolphincove Ocho Rios</a>
+                <a href="#">Dolphincove Montego Bay </a>
+                <a href="#">Dolphincove Moon Palace</a>
+                <a href="#">indonesia</a>
+                <a href="#">Singapore</a>
+                <a href="#">Taiiwan</a>
+                </div>
+            </div> 
+                </a></li>
+             <li> <a href="'/cart'" > cart</a></li>
+             <li> <a href="'/about'" > About</a></li>
+    
+            </ul>
+        </nav>
+       <button class="navBtn"  >Signup</button>
+      </header>
+      <div class="box">
+        <div class="hero-image">
+            <div class="hero-text">
+              <h2 class="active" style=" margin-bottom: 10px; font-size:3vw; padding-left:3vw;">dolphin cove ocho rios</p>
+              
+            </div>
+            
+          </div>
+        </div>
+        <section class = "banner">
+            <h2>BOOK YOUR TABLE NOW</h2>
+            <div class = "card-container">
+                <div class="details">
+                <p>
+                    The Caribbean's number one attraction!
+Dolphin Cove Ocho Rios Jamaica has a natural cove which is surrounded by 5 acres of lush tropical rainforest. Visitors have the opportunity to interact and swim with jamaican dolphins in their natural environment while enjoying the thrill and love of these amazing marine mammals. Visitors can also swim, hold, feed, and learn about the evolutionary secrets of the Caribbean sharks.
+
+Dolphin Cove Ocho Ríos Jamaica is full of natural wonders and beauty,</p><p> you gotta see it for yourself!. Enjoy Dolphin Cove in Ocho Rios, while strolling around in our Jungle Trail, you will notice many different wild animals, plants and trees. At Dolphin Cove Jamaica, we respect the environment of all the species, here you will live the most natural experience you’ve ever had. Jamaica Dolphin Cove is the place to spend the day enjoying lots of fun activities. There is something for everyone.
+
+Dolphin Cove Ocho Rios entrance cost includes full use of the following activities:</p>
+
+Interact and snorkel with stingrays
+Interact with exotic birds, snakes and iguanas on the Jungle Trail walk
+Relax on our glistening white sandy beaches
+Guests can enjoy the tropical surroundings, taste our famous Jamaican coffee at our Star Buccaneers coffee shop, browse for souvenirs or jewellery at our very own gift shops. Be entertained while you are having lunch against the backdrop of the Caribbean Sea. Play some games, win a prize, learn a little about Jamaica and Dolphins. At Dolphin Cove Jamaica there are activities to keep you busy for the entire day.
+
+The Dolphin Cove Jamaica Entrance Fee is included with all dolphin and shark interactive programs.
+                </p>
+            </div>
+              
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form action="/ochorios/act" method="post">
+                        <div class = "form-row">
+                            <label for="bookdate">date</label>
+                            <input type="date" name = "bookdate" label="date">
+
+                            <select name = "hour">
+                                <option value = "hour-select">Select Hour</option>
+                                <option value = "10">10: 00</option>
+                                <option value = "10">12: 00</option>
+                                <option value = "10">14: 00</option>
+                                <option value = "10">16: 00</option>
+                                <option value = "10">18: 00</option>
+                                <option value = "10">20: 00</option>
+                                <option value = "10">22: 00</option>
+                            </select>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" name="fullName" placeholder="fullName">
+                            <input type = "text" name="phone" placeholder="Phone Number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" name="people" placeholder="How Many Adults?" min = "1">
+                            
+                            <select name = "activities">
+                                <option value = "1">activities</option>
+                                <option value = "2">Dolphin swim adventure</option>
+                                <option value = "3">Dolphin Royal Swim</option>
+                                <option value = "4">Shark Encounter</option>
+                                <option value = "5">Encounter</option>
+                                <option value = "6">Admissions Plus</option>
+                            </select>
+                        </div>
+                        <div class = "form-row">
+                           
+                           <select name="locay">
+                            <option value = "1">ochorios</option>
+                           </select>
+                            </div>
+                        
+                            <input type = "submit" value = "BOOK TABLE">
+                    </form>
+                    </div>
+                  
+           
+                </div>
+                <div class="icon-text">
+                    <label for="fname">Accepted Cards</label>
+                </div>
+                <div class="icon-container">
+                   
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+           
+        </section>
+
+
+        <div class="main">
+            <%
+            programs.forEach(items => { %>   
+         
+         <div class="card">
+         
+         <div class="image">
+            <img src="<%= items.image %>">
+         </div>
+         <div>
+             <div class="title">
+              <h1>
+            <%=items.program_name %></h1>
+             </div>
+             <div class="des" >
+              <p style="margin-bottom:0.5vw"><%=items.description %></p>
+             <p><%=items.cost %></p>
+             <button class="button1">book</button>
+             </div>
+        </div>
+         </div>
+      <% });%>
+        </div>

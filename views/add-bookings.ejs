@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="add-bookings.css">
+</head>
+<body>
+    <center>
+        <h2 style="padding-top:2vw; font-weight:lighter"> Create A Booking</h2>
+    <div class = "card-content">
+        <h3>Reservation</h3>
+        <form action="/gate" method="post">
+            <div class = "form-row">
+                
+                <input type="date" name = "bookdate" placeholder="choose date">
+
+                <select name = "hour">
+                    <option value = "hour-select">Select Hour</option>
+                    <option value = "10">10: 00</option>
+                    <option value = "10">12: 00</option>
+                    <option value = "10">14: 00</option>
+                    <option value = "10">16: 00</option>
+                    <option value = "10">18: 00</option>
+                    <option value = "10">20: 00</option>
+                    <option value = "10">22: 00</option>
+                </select>
+            </div>
+
+            <div class = "form-row">
+                <input type = "text" name="fullName" placeholder="fullName">
+                <input type = "text" name="phone" placeholder="Phone Number">
+            </div>
+
+            <div class = "form-row">
+                <input type = "number" name="people" placeholder="How Many Adults?" min = "1">
+                
+                <select name = "activities">
+                    <option value = "1">activities</option>
+                    <option value = "2">Dolphin swim adventure</option>
+                    <option value = "3">Dolphin Royal Swim</option>
+                    <option value = "4">Shark Encounter</option>
+                    <option value = "5">Encounter</option>
+                    <option value = "6">Admissions Plus</option>
+                </select>
+            </div>
+            <div class = "form-row">
+               
+               <select name="locay">
+                <option value = "1">ochorios</option>
+                <option value = "2">Montego-Bay</option>
+                <option value = "3">Moon-palace</option>
+                <option value = "4">Puerto Seco</option>
+               </select>
+                </div>
+            
+                <input type = "submit" value = "BOOK TABLE">
+        </form>
+        </div>
+    </center>
+</body>
+</html>
